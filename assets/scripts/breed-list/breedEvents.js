@@ -11,6 +11,7 @@ const onCreateNewListItem = function (event) {
   breedApi.createNewListItem(data)
     .then(breedUi.createNewListItemSuccess)
     .catch(breedUi.createNewListItemFailure)
+  // $('#create-new-list-item').find('input:text, input:password, select, textarea').val('')
 }
 
 const addHandlers = function () {

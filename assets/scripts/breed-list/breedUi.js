@@ -1,5 +1,6 @@
 'use strict'
 const store = require('../store')
+const showBreedList = require('../templates/breed-listing.handlebars')
 
 const createNewListItemSuccess = function (data) {
   console.log(data)
@@ -22,8 +23,19 @@ const createNewListItemFailure = function (error) {
   console.log('nope')
   alert('error')
 }
+const showFullListSuccess = function (data) {
+  const showBreedHtml = showBreedList({ breed_lists: data.breed_lists })
+  $('.list').append(showBreedHtml)
+  $('.messages').text('Success! Scroll to see all')
+}
+
+const showFullListFailure = function () {
+  $('.list').text('Error try again')
+}
 
 module.exports = {
   createNewListItemSuccess,
-  createNewListItemFailure
+  createNewListItemFailure,
+  showFullListSuccess,
+  showFullListFailure
 }

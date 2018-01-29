@@ -7,7 +7,7 @@ const createNewListItemSuccess = function (data) {
   console.log('success')
   const breedHtml = (
     `
-    <p>Dog ID: ${data.breed_list.id}</p>
+    <h1>Dog ID: ${data.breed_list.id}</h1>
     <p>Dog breed: ${data.breed_list.breed}</p>
     <p>Dog gender: ${data.breed_list.gender}</p>
     <p>Dog weight: ${data.breed_list.weight}</p>
@@ -15,12 +15,13 @@ const createNewListItemSuccess = function (data) {
     `
   )
   $('.list').append(breedHtml).scroll()
-  $('.messages').text('Success! Scroll to see all')
+  $('.messages').text('Success! Scroll to see')
 }
 
 const createNewListItemFailure = function (error) {
   console.log(error)
   console.log('nope')
+  $('.messages').text('Please input all fields to add to list')
 }
 const showFullListSuccess = function (data) {
   const showBreedHtml = showBreedList({ breed_lists: data.breed_lists })

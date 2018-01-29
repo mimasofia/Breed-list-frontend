@@ -23,6 +23,11 @@ const onShowFullList = function (event) {
     .catch(breedUi.showFullListFailure)
 }
 
+const onClearList = (event) => {
+  event.preventDefault()
+  breedUi.clearList()
+}
+
 const onShowOneBreed = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
@@ -38,7 +43,7 @@ const onUpdateListItem = function (event) {
   breedApi.updateListItem(data)
     .then(breedUi.updateListItemSuccess)
     .catch(breedUi.updateListItemFailure)
-  $('#create-new-list-item').find('input:text, input:password, select, textarea').val('')
+  $('#update-list-item').find('input:text, input:password, select, textarea').val('')
   $('input[type=number]').val('')
 }
 
@@ -51,10 +56,11 @@ const onRemoveOneListItem = function (event) {
 }
 const addHandlers = function () {
   $('#create-new-list-item').on('submit', onCreateNewListItem)
-  $('#show-full-list').on('submit', onShowFullList)
+  $('#showListButton').on('click', onShowFullList)
   $('#show-one-breed').on('submit', onShowOneBreed)
   $('#update-list-item').on('submit', onUpdateListItem)
   $('#delete-one-item').on('submit', onRemoveOneListItem)
+  $('#clearListButton').on('click', onClearList)
 }
 
 module.exports = {

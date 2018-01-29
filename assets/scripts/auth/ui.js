@@ -37,7 +37,8 @@ const changePasswordFailure = function (error) {
 }
 
 const signOutSuccess = function () {
-  console.log('Successfully signed out')
+  $('.list').empty()
+  // console.log('Successfully signed out')
   $('.messages').text('Successfully signed out!')
   store.user = null
 }

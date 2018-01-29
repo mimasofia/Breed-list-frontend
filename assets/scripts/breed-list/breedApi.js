@@ -25,7 +25,18 @@ const showFullList = function (data) {
   })
 }
 
+const showOneBreed = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/breed_lists/' + data.breed_list.id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
 module.exports = {
   createNewListItem,
-  showFullList
+  showFullList,
+  showOneBreed
 }

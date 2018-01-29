@@ -9,7 +9,12 @@
 
 .list{
   border: 1px solid #000;
+  display: inline-block;
   text-align: center;
   height: 100px;
-  width: auto;
+  width: 40%;
+}
+
+.one-breed {
+  height: 40px;
 }

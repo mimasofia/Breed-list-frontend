@@ -11,7 +11,8 @@ const onCreateNewListItem = function (event) {
   breedApi.createNewListItem(data)
     .then(breedUi.createNewListItemSuccess)
     .catch(breedUi.createNewListItemFailure)
-  // $('#create-new-list-item').find('input:text, input:password, select, textarea').val('')
+  $('#create-new-list-item').find('input:text, input:password, select, textarea').val('')
+  $('input[type=number]').val('')
 }
 
 const onShowFullList = function (event) {
@@ -22,9 +23,19 @@ const onShowFullList = function (event) {
     .catch(breedUi.showFullListFailure)
 }
 
+const onShowOneBreed = function (event) {
+  const data = getFormFields(this)
+  event.preventDefault()
+  breedApi.showOneBreed(data)
+    .then(breedUi.showOneBreedSuccess)
+    .catch(breedUi.showOneBreedFailure)
+  $('#show-one-breed').find('input:text, input:password, select, textarea').val('')
+}
+
 const addHandlers = function () {
   $('#create-new-list-item').on('submit', onCreateNewListItem)
   $('#show-full-list').on('submit', onShowFullList)
+  $('#show-one-breed').on('submit', onShowOneBreed)
 }
 
 module.exports = {

@@ -1,5 +1,5 @@
 'use strict'
-const store = require('../store')
+// const store = require('../store')
 const showBreedList = require('../templates/breed-listing.handlebars')
 
 const createNewListItemSuccess = function (data) {
@@ -55,11 +55,31 @@ const showOneBreedFailure = function () {
   $('.messages').text('Error getting breed. Please provide list item ID')
 }
 
+const updateListItemSuccess = function (data) {
+  $('.messages').text('Success updating')
+}
+
+const updateListItemFailure = function () {
+  $('.messages').text('Error on update. Please Fill out ALL fields')
+}
+
+const removeOneListItemSuccess = function () {
+  $('.messages').text('Success removing item from list!')
+}
+
+const removeOneListItemFailure = function () {
+  $('messages').text('Error on removing item from list. Please try again by entering Breed ID')
+}
+
 module.exports = {
   createNewListItemSuccess,
   createNewListItemFailure,
   showFullListSuccess,
   showFullListFailure,
   showOneBreedSuccess,
-  showOneBreedFailure
+  showOneBreedFailure,
+  updateListItemSuccess,
+  updateListItemFailure,
+  removeOneListItemSuccess,
+  removeOneListItemFailure
 }

@@ -67,9 +67,27 @@
       <fieldset>
         <legend>Show One Breed</legend>
         <div class="one-breed" style="overflow-y: scroll"></div>
-        <div id="one-breed"></div>
+        <!-- <div id="one-breed"></div> -->
         <input type="text" name='breed_list[id]'  placeholder="Breed id here">
         <input type="submit" name="submit" value="One breed">
+      </fieldset>
+    </form>
+    <form id="update-list-item">
+        <fieldset>
+          <legend>Update List Item</legend>
+          <input name="breed_list[id]" type="text" placeholder="Breed ID">
+          <input name="breed_list[breed]" type="text" placeholder="New Breed">
+          <input name="breed_list[gender]" type="text" placeholder="New Gender">
+          <input name="breed_list[weight]" type="number" placeholder="New Weight">
+          <input name="breed_list[height]" type="number" placeholder="New Height">
+          <input type="submit" name="submit" value="Update List Item">
+        </fieldset>
+      </form>
+      <form id='delete-one-item' class="delete-one-item">
+      <fieldset>
+        <legend>Remove ONE list item</legend>
+        <input type="text" name='breed_list[id]'  placeholder="Breed id here">
+        <input type="submit" name="submit" value="Delete one list item">
       </fieldset>
     </form>
     </body>

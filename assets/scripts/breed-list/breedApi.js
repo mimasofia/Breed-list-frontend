@@ -35,8 +35,33 @@ const showOneBreed = function (data) {
     data
   })
 }
+
+const updateListItem = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/breed_lists/' + data.breed_list.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+const removeOneListItem = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/breed_lists/' + data.breed_list.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   createNewListItem,
   showFullList,
-  showOneBreed
+  showOneBreed,
+  updateListItem,
+  removeOneListItem
 }

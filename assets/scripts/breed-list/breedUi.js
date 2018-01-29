@@ -7,15 +7,16 @@ const createNewListItemSuccess = function (data) {
   // console.log('success')
   const breedHtml = (
     `
-    <h3>Dog ID: ${data.breed_list.id}</h3>
-    <p>Dog breed: ${data.breed_list.breed}</p>
+    <h3>Dog breed: ${data.breed_list.breed}</h3>
+    <p>Dog ID: ${data.breed_list.id}</p>
     <p>Dog gender: ${data.breed_list.gender}</p>
     <p>Dog weight: ${data.breed_list.weight}</p>
     <p>Dog height: ${data.breed_list.height}</p>
     `
   )
-  $('.list').append(breedHtml).scroll()
-  $('.messages').text('Success! Scroll to see')
+  $('.list').empty()
+  $('.list').append(breedHtml)
+  $('.messages').text('Success!')
 }
 
 const createNewListItemFailure = function () {
@@ -46,14 +47,14 @@ const showOneBreedSuccess = function (data) {
     `
   )
   $('.list').empty()
-  $('.one-breed').append(breedHtml)
+  $('.list').append(breedHtml)
   // $('list').empty()
   $('.messages').text('Success! Scroll to see')
 }
 
 const showOneBreedFailure = function () {
   // console.log(error)
-  $('.messages').text('Error getting breed. Please provide list item ID')
+  $('.messages').text('Error getting breed. Please provide valid item ID')
 }
 
 const updateListItemSuccess = function (data) {
@@ -76,7 +77,8 @@ const updateListItemFailure = function () {
 }
 
 const removeOneListItemSuccess = function () {
-  $('.messages').text('Success removing item from list!')
+  $('.list').empty()
+  $('.messages').text('Success removing item from list! Click Show Full list to see new list')
 }
 
 const removeOneListItemFailure = function () {

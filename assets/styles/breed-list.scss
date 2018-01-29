@@ -2,19 +2,43 @@
   width: 100%;
 }
 
+footer {
+  clear: both;
+}
+
 .container-fluid {
   text-align: center;
-  width: 80%;
+  width: 100%;
 }
+
+legend {
+  border-bottom: none;
+}
+
+.delete-one-item,
+.show-one-breed,
+.show-full-list {
+  width: 30%;
+  float: left;
+}
+
+// .show-full-list,{
+//   float: left;
+// }
 
 .list{
   border: 1px solid #000;
   display: inline-block;
+  float: left;
   text-align: center;
-  height: 100px;
+  height: 500px;
   width: 40%;
 }
 
-.one-breed {
-  height: 40px;
-}
+// .one-breed {
+//   height: 40px;
+// }
+
+// .show-full-list {
+//   float: left;
+// }

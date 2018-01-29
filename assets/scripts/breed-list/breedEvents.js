@@ -53,6 +53,7 @@ const onRemoveOneListItem = function (event) {
   breedApi.removeOneListItem(data)
     .then(breedUi.removeOneListItemSuccess)
     .catch(breedUi.removeOneListItemFailure)
+    $('#delete-one-item').find('input:text, input:password, select, textarea').val('')
 }
 const addHandlers = function () {
   $('#create-new-list-item').on('submit', onCreateNewListItem)

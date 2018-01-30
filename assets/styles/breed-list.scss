@@ -2,43 +2,42 @@
   width: 100%;
 }
 
-footer {
-  clear: both;
-}
-
 .container-fluid {
   text-align: center;
   width: 100%;
 }
 
-legend {
-  border-bottom: none;
+footer {
+  clear: both;
 }
 
 .delete-one-item,
 .show-one-breed,
 .show-full-list {
-  width: 30%;
   float: left;
+  width: 30%;
 }
 
-// .show-full-list,{
-//   float: left;
-// }
+.hide {
+  display: 0;
+}
 
-.list{
+legend {
+  border-bottom: 0;
+}
+
+.list {
   border: 1px solid #000;
   display: inline-block;
+  font-size:20px;
   float: left;
+  height: 300px;
   text-align: center;
-  height: 500px;
-  width: 40%;
+  width: 100%;
 }
 
-// .one-breed {
-//   height: 40px;
-// }
-
-// .show-full-list {
-//   float: left;
-// }
+.messages {
+  height: 40px;
+  font-size: 20px;
+  // width: 100%;
+}

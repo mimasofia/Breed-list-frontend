@@ -13,8 +13,10 @@
     </head>
     <body class="container-fluid">
       <div class="all-forms">
+    <h1>Welcome! Thinking of getting a dog? Here you can make a list of potential Dog Breeds!</h1>
+    <h3 class="details">Sign-up or Sign-in to start your very own list!</h3>
         <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signModal">
+<button type="button" class="btn btn-primary" id="sign-in-up"data-toggle="modal" data-target="#signModal">
   Sign-in, Sign-up
 </button>
 
@@ -30,7 +32,7 @@
       </div>
       <div class="modal-body">
         <div class="messages"></div>
-        <form id="sign-up" class="sign-up">
+        <form id="sign-up" class="sign-up sign-hide">
           <fieldset>
             <legend>Sign up!</legend>
             <input type="text" name="credentials[email]" value="" placeholder="Enter Email">
@@ -39,7 +41,7 @@
             <input type="submit" name="submit" value="Sign up!">
           </fieldset>
         </form>
-        <form id="sign-in" class="sign-in">
+        <form id="sign-in" class="sign-in sign-hide">
           <fieldset>
             <legend>Sign In</legend>
             <input type="text" name="credentials[email]" placeholder="Enter Email Here">
@@ -49,7 +51,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button"  class="btn btn-secondary" data-dismiss="modal">Close</button>
         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
     </div>
@@ -59,7 +61,7 @@
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#accountModal">
+<button type="button" class="btn btn-primary hide" id="account-pass-out"data-toggle="modal" data-target="#accountModal">
   Account
 </button>
 
@@ -74,6 +76,7 @@
         </button>
       </div>
       <div class="modal-body">
+        <div class="messages"></div>
         <form id="password-change" class="password-change">
           <fieldset>
             <legend>Change Password</legend>
@@ -100,7 +103,7 @@
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#friendModal">
+<button type="button" class="btn btn-primary hide" id="add-friend-here"data-toggle="modal" data-target="#friendModal">
   Add Potenital Dog-friend to List
 </button>
 
@@ -115,6 +118,7 @@
         </button>
       </div>
       <div class="modal-body">
+        <div class="messages"></div>
         <form id='create-new-list-item' class="create-new-list-item">
           <fieldset>
             <legend>Add dog breed to list</legend>
@@ -135,7 +139,7 @@
 </div>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateModal">
+<button type="button" class="btn btn-primary hide" id="update-friend-here"data-toggle="modal" data-target="#updateModal">
   Update an Existing Breed
 </button>
 
@@ -150,6 +154,7 @@
         </button>
       </div>
       <div class="modal-body">
+        <div class="messages"></div>
         <form id="update-list-item">
             <fieldset>
               <legend>Update List Item</legend>
@@ -170,11 +175,6 @@
   </div>
 </div>
 
-
-
-
-
-
       <div class="messages"></div>
       <div class="list" style="overflow-y: scroll"></div>
       <!-- <form id='create-new-list-item' class="create-new-list-item">
@@ -188,7 +188,7 @@
         </fieldset>
       </form> -->
     <footer>
-      <form id='show-full-list' class="show-full-list">
+      <form id='show-full-list' class="show-full-list hide">
         <fieldset>
           <legend>Full list</legend>
           <button id="showListButton" class="btn btn-default">Show Full List!</button>
@@ -196,7 +196,7 @@
           <button id="clearListButton" class="btn btn-default">Clear List!</button>
         </fieldset>
       </form>
-      <form id='show-one-breed' class="show-one-breed">
+      <form id='show-one-breed' class="show-one-breed hide">
       <fieldset>
         <legend>Show One Breed</legend>
         <!-- <div class="one-breed" style="overflow-y: scroll"></div> -->
@@ -216,7 +216,7 @@
           <input type="submit" name="submit" value="Update List Item">
         </fieldset>
       </form> -->
-      <form id='delete-one-item' class="delete-one-item">
+      <form id='delete-one-item' class="delete-one-item hide">
       <fieldset>
         <legend>Remove ONE list item</legend>
         <input type="text" name='breed_list[id]'  placeholder="Breed id here">

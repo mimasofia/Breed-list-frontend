@@ -50,10 +50,14 @@ const signOutSuccess = function () {
   // console.log('Successfully signed out')
   // $('words-hide').addClass('hide')
   store.user = null
+  $('.messages').text('Successfully signed out!')
   $('#sign-in-up').removeClass('hide')
   $('#account-pass-out').addClass('hide')
   $('#add-friend-here').addClass('hide')
   $('#update-friend-here').addClass('hide')
+  $('#show-full-list').addClass('hide')
+  $('#show-one-breed').addClass('hide')
+  $('#delete-one-item').addClass('hide')
 }
 
 const signOutFailure = function () {

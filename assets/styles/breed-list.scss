@@ -2,11 +2,25 @@
   width: 100%;
 }
 
-.container-fluid {
-  text-align: center;
-  width: 100%;
+.btn-primary {
+  background-color: #993300;
 }
 
+.container-fluid {
+  text-align: center;
+  width: 80%;
+  background-color: #ffddcc;
+}
+
+.delete-input,
+.one-input {
+  width: 30%;
+}
+
+.clearListButton,
+.showListButton {
+  height: 30px;
+}
 footer {
   clear: both;
 }
@@ -16,6 +30,11 @@ footer {
 .show-full-list {
   float: left;
   width: 30%;
+  margin-left: 15px;
+}
+
+h3 {
+  color: #000
 }
 
 .hide {
@@ -27,6 +46,7 @@ legend {
 }
 
 .list {
+  background-color: #ffbb99;
   border: 1px solid #000;
   display: inline-block;
   font-size:20px;

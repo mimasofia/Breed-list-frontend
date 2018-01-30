@@ -13,7 +13,7 @@
     </head>
     <body class="container-fluid">
       <div class="all-forms">
-    <h1>Welcome! Thinking of getting a dog? Here you can make a list of potential Dog Breeds!</h1>
+    <h1>Welcome! Thinking of getting a dog? Here, you can make a list of potential Dogs!</h1>
     <h3 class="details">Sign-up or Sign-in to start your very own list!</h3>
         <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" id="sign-in-up"data-toggle="modal" data-target="#signModal">
@@ -191,9 +191,9 @@
       <form id='show-full-list' class="show-full-list hide">
         <fieldset>
           <legend>Full list</legend>
-          <button id="showListButton" class="btn btn-default">Show Full List!</button>
+          <button id="showListButton" class="btn btn-default showListButton">Show Full List!</button>
           <!-- <input class="show-full-list-submit" type="submit" name="submit" value="Click For Full List"> -->
-          <button id="clearListButton" class="btn btn-default">Clear List!</button>
+          <button id="clearListButton" class="btn btn-default clearListButton">Clear List!</button>
         </fieldset>
       </form>
       <form id='show-one-breed' class="show-one-breed hide">
@@ -201,7 +201,7 @@
         <legend>Show One Breed</legend>
         <!-- <div class="one-breed" style="overflow-y: scroll"></div> -->
         <!-- <div id="one-breed"></div> -->
-        <input type="text" name='breed_list[id]'  placeholder="Breed id here">
+        <input type="text" class="one-input"name='breed_list[id]'  placeholder="Breed id here">
         <input type="submit" name="submit" value="One breed">
       </fieldset>
     </form>
@@ -219,8 +219,9 @@
       <form id='delete-one-item' class="delete-one-item hide">
       <fieldset>
         <legend>Remove ONE list item</legend>
-        <input type="text" name='breed_list[id]'  placeholder="Breed id here">
-        <input type="submit" name="submit" value="Delete one list item">
+        <input class="delete-input"type="text" name='breed_list[id]'  placeholder="Breed id here">
+        <input type="submit" name="submit" value="Delete one item">
+        <!-- <button type="submit" name="submit" value="Delete one list item"> -->
       </fieldset>
     </form>
   </div>

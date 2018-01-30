@@ -52,7 +52,7 @@ const showOneBreedSuccess = function (data) {
   $('.list').empty()
   $('.list').append(breedHtml)
   // $('list').empty()
-  $('.messages').text('Success! Scroll to see')
+  $('.messages').text('Success!')
   $('.details').hide()
 }
 
@@ -84,15 +84,17 @@ const updateListItemFailure = function () {
   $('.details').hide()
 }
 
-const removeOneListItemSuccess = function () {
+const removeOneListItemSuccess = function (data) {
   $('.list').empty()
-  $('.messages').text('Success removing item from list! Click Show Full list to see new list')
+  $('.messages').text('Success removing item from list!')
   $('.details').hide()
+  $('.list').text('Click Show Full list to see updated list')
 }
 
 const removeOneListItemFailure = function () {
-  $('messages').text('Error on removing item from list. Please try again by entering Breed ID')
+  $('.messages').text('Error on removing item from list. Please try again by entering Breed ID')
   $('.details').hide()
+  $('.list').text('=O')
 }
 
 const clearList = () => {

@@ -27,10 +27,16 @@ const createNewListItemFailure = function () {
 }
 const showFullListSuccess = function (data) {
   $('.list').empty()
-  const showBreedHtml = showBreedList({ breed_lists: data.breed_lists })
-  $('.list').append(showBreedHtml)
-  $('.messages').text('Success! Scroll to see all')
   $('.details').hide()
+  $('.messages').text('')
+  if (data.breed_lists.length === 0) {
+    $('.list').text('No dogs in list. Please create a dog-friend first with  -Add Potenital Dog-friend to List button- above')
+  } else {
+    const showBreedHtml = showBreedList({ breed_lists: data.breed_lists })
+    $('.list').append(showBreedHtml)
+    $('.messages').text('Success! Scroll to see all')
+    $('.details').hide()
+  }
 }
 
 const showFullListFailure = function () {
@@ -51,7 +57,6 @@ const showOneBreedSuccess = function (data) {
   )
   $('.list').empty()
   $('.list').append(breedHtml)
-  // $('list').empty()
   $('.messages').text('Success!')
   $('.details').hide()
 }
@@ -80,7 +85,7 @@ const updateListItemSuccess = function (data) {
 }
 
 const updateListItemFailure = function () {
-  $('.messages').text('Error on update. Please fill out ALL fields and have an existing dog ID')
+  $('.messages').text('Error. Please fill out ALL fields and have an existing dog ID')
   $('.details').hide()
 }
 

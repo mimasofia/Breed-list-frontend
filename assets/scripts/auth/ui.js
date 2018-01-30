@@ -58,13 +58,13 @@ const signOutSuccess = function () {
   $('#show-full-list').addClass('hide')
   $('#show-one-breed').addClass('hide')
   $('#delete-one-item').addClass('hide')
+  $('.details').text('Sign-up or Sign-in to start your very own list!')
 }
 
 const signOutFailure = function () {
   // console.log(error)
   // console.log('fail')
   $('.messages').text('Error when signing out. Please try again')
-  $('.details').text('Sign-up or Sign-in to start your very own list!')
 }
 
 module.exports = {

@@ -19,17 +19,20 @@ const createNewListItemSuccess = function (data) {
   $('.messages').text('Success!')
   $('.details').hide()
   $('#friendModal').modal('hide')
+  $('.add-dog-messages').text('')
 }
 
 const createNewListItemFailure = function () {
   // console.log(error)
   // console.log('nope')
+  $('.add-dog-messages').text('Please input all fields to add to list')
   $('.messages').text('Please input all fields to add to list')
 }
 const showFullListSuccess = function (data) {
   $('.list').empty()
   $('.details').hide()
   $('.messages').text('')
+  $('.modal-messages').text('')
   if (data.breed_lists.length === 0) {
     $('.list').text('No dogs in list. Please create a dog-friend first with  -Add Potential Dog-friend to List button- above')
   } else {
@@ -60,6 +63,7 @@ const showOneBreedSuccess = function (data) {
   $('.list').append(breedHtml)
   $('.messages').text('Success!')
   $('.details').hide()
+  $('.modal-messages').text('')
 }
 
 const showOneBreedFailure = function (data) {
@@ -84,11 +88,13 @@ const updateListItemSuccess = function (data) {
   $('.messages').text('Success updating. See update below')
   $('.details').hide()
   $('#updateModal').modal('hide')
+  $('.modal-messages').text('')
 }
 
 const updateListItemFailure = function () {
   $('.messages').text('Error. Please fill out ALL fields and have an existing dog ID')
   $('.details').hide()
+  $('.modal-messages').text('Error. Please fill out ALL fields and have an existing dog ID')
 }
 
 const removeOneListItemSuccess = function (data) {
@@ -96,6 +102,7 @@ const removeOneListItemSuccess = function (data) {
   $('.messages').text('Success removing item from list!')
   $('.details').hide()
   $('.list').text('Click Show Full list to see updated list')
+  $('.modal-messages').text('')
 }
 
 const removeOneListItemFailure = function () {

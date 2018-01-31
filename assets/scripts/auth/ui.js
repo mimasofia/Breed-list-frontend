@@ -4,12 +4,14 @@ const store = require('../store')
 const signUpSuccess = function (data) {
   // console.log(data)
   $('.messages').text('Successfully signed up!')
+  $('.sign-messages').text('Successfully signed up!')
   // console.log('succes')
 }
 
 const signUpFailure = function () {
   // console.error(error)
   $('.messages').text('Error when signing up. Please try again')
+  $('.sign-messages').text('Error when signing up. Please try again')
   // console.log('faliure')
 }
 
@@ -27,22 +29,26 @@ const signInSuccess = function (data) {
   $('#delete-one-item').removeClass('hide')
   $('.list').text('All list related items will appear HERE')
   $('.list').removeClass('hide')
+  $('.change-out-messages').text('')
 }
 
 const signInFailure = function () {
   // console.error(error)
   $('.messages').text('Error when signing in. Please try again')
+  $('.sign-messages').text('Error when signing in. Please try again')
 }
 
 const changePasswordSuccess = function () {
   // console.log('Successfully changed password')
   $('.messages').text('Successfully changed password!')
+  $('.change-out-messages').text('')
   $('#accountModal').modal('hide')
 }
 
 const changePasswordFailure = function () {
   // console.log(error)
   $('.messages').text('Error when changing password. Please try again')
+  $('.change-out-messages').text('Error when changing password. Please try again')
 }
 
 const signOutSuccess = function () {
@@ -61,12 +67,14 @@ const signOutSuccess = function () {
   $('.details').text('Sign-up or Sign-in to start your very own list!')
   $('#accountModal').modal('hide')
   $('.list').addClass('hide')
+  $('.change-out-messages').text('')
 }
 
 const signOutFailure = function () {
   // console.log(error)
   // console.log('fail')
   $('.messages').text('Error when signing out. Please try again')
+  $('.change-out-messages').text('Error when signing out. Please try again')
 }
 
 module.exports = {

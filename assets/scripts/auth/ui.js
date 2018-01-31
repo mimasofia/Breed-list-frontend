@@ -16,7 +16,7 @@ const signUpFailure = function () {
 const signInSuccess = function (data) {
   $('.messages').text('Successfully signed in!')
   store.user = data.user
-  $('.details').text('Enjoy making a list of your potential dog-friends!')
+  $('.details').text('If this is your first time start by adding a Dog to the list with -Add Potenital Dog-friend to List button- above')
   $('#sign-in-modal').modal('hide')
   $('#sign-in-up').addClass('hide')
   $('#account-pass-out').removeClass('hide')
@@ -26,6 +26,7 @@ const signInSuccess = function (data) {
   $('#show-one-breed').removeClass('hide')
   $('#delete-one-item').removeClass('hide')
   $('.list').text('All list related items will appear HERE')
+  $('.list').removeClass('hide')
 }
 
 const signInFailure = function () {
@@ -59,6 +60,7 @@ const signOutSuccess = function () {
   $('#delete-one-item').addClass('hide')
   $('.details').text('Sign-up or Sign-in to start your very own list!')
   $('#accountModal').modal('hide')
+  $('.list').addClass('hide')
 }
 
 const signOutFailure = function () {

@@ -176,17 +176,8 @@
 </div>
 
       <div class="messages"></div>
-      <div class="list" style="overflow-y: scroll"></div>
-      <!-- <form id='create-new-list-item' class="create-new-list-item">
-        <fieldset>
-          <legend>Add dog breed to list</legend>
-          <input type="text" name="breed_list[breed]" placeholder="Breed">
-          <input type="text" name="breed_list[gender]" placeholder="Gender">
-          <input type="number" name="breed_list[weight]" placeholder="Weight">
-          <input type="number" name="breed_list[height]" placeholder="Height">
-          <input type="submit" name="submit" value="New Game">
-        </fieldset>
-      </form> -->
+      <div class="list hide" style="overflow-y: scroll"></div>
+
     <footer>
       <form id='show-full-list' class="show-full-list hide">
         <fieldset>
@@ -196,6 +187,7 @@
           <button id="clearListButton" class="btn btn-default clearListButton">Clear List!</button>
         </fieldset>
       </form>
+
       <form id='show-one-breed' class="show-one-breed hide">
       <fieldset>
         <legend>Show One Breed</legend>
@@ -205,17 +197,7 @@
         <input type="submit" name="submit" value="One breed">
       </fieldset>
     </form>
-    <!-- <form id="update-list-item">
-        <fieldset>
-          <legend>Update List Item</legend>
-          <input name="breed_list[id]" type="text" placeholder="Breed ID">
-          <input name="breed_list[breed]" type="text" placeholder="New Breed">
-          <input name="breed_list[gender]" type="text" placeholder="New Gender">
-          <input name="breed_list[weight]" type="number" placeholder="New Weight">
-          <input name="breed_list[height]" type="number" placeholder="New Height">
-          <input type="submit" name="submit" value="Update List Item">
-        </fieldset>
-      </form> -->
+
       <form id='delete-one-item' class="delete-one-item hide">
       <fieldset>
         <legend>Remove ONE list item</legend>

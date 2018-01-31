@@ -30,7 +30,13 @@ footer {
 .show-full-list {
   float: left;
   width: 30%;
-  margin-left: 15px;
+  margin-left: 25px;
+  background-color: #f2ffcc;
+  border-radius: 25%;
+}
+
+.details {
+  color:  #6666ff;
 }
 
 h3 {
@@ -59,5 +65,6 @@ legend {
 .messages {
   height: 40px;
   font-size: 20px;
+  color: #aa80ff;
   // width: 100%;
 }

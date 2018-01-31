@@ -99,14 +99,14 @@ const removeOneListItemSuccess = function (data) {
 }
 
 const removeOneListItemFailure = function () {
-  $('.list').text('Error. Please provide existing dog ID or add new dog to list')
+  $('.messages').text('Error. Please provide existing dog ID or add new dog to list')
   $('.details').hide()
-  // $('.list').text('=O')
+  $('.list').text('=(')
 }
 
 const clearList = () => {
   $('.list').empty()
-  $('.messages').text('')
+  $('.messages').text('Things to do: Add a Dog, See Full list, Update existing Dog, Remove dog from list, View one Dog')
 }
 
 module.exports = {

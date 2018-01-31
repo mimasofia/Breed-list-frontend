@@ -9,7 +9,6 @@ const store = require('../store')
 const onSignUp = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
-  // $('#signModall').modal('hide')
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
@@ -19,6 +18,7 @@ const onSignUp = function (event) {
 const onSignIn = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
+  $('#sign-in-out').modal('hide')
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)

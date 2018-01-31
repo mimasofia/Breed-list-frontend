@@ -61,7 +61,7 @@ const showOneBreedSuccess = function (data) {
   $('.details').hide()
 }
 
-const showOneBreedFailure = function () {
+const showOneBreedFailure = function (data) {
   // console.log(error)
   $('.messages').text('Error getting breed. Please provide existing dog ID')
   $('.list').text('=(')
@@ -97,9 +97,9 @@ const removeOneListItemSuccess = function (data) {
 }
 
 const removeOneListItemFailure = function () {
-  $('.messages').text('Error on removing item from list. Please try again by entering Breed ID')
+  $('.list').text('Error. Please provide existing dog ID or add new dog to list')
   $('.details').hide()
-  $('.list').text('=O')
+  // $('.list').text('=O')
 }
 
 const clearList = () => {

@@ -6,7 +6,7 @@ In this project, for the front end, I used JQuery, CSS, HTML, Ajax. For the back
 
 Unsolved 'problems':
 
-One of the features I wanted to add was that when you inupt the ID to update an item on the list, that all the fields would populate with the data from that id. This way the user wouldn't have to input all the fields allover again and instead could just change those they wanted. As of now I haven't been able to do this.
+One of the features I wanted to add was that when you inupt the ID to update an item on the list, that all the fields would populate with the data from that id. This way the user wouldn't have to input all the fields allover again and instead could just change those they wanted. As of now I haven't been able to do this. Also merging some branches got a bit confusing.
 
 User stories
 

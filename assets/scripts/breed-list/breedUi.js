@@ -31,7 +31,7 @@ const showFullListSuccess = function (data) {
   $('.details').hide()
   $('.messages').text('')
   if (data.breed_lists.length === 0) {
-    $('.list').text('No dogs in list. Please create a dog-friend first with  -Add Potenital Dog-friend to List button- above')
+    $('.list').text('No dogs in list. Please create a dog-friend first with  -Add Potential Dog-friend to List button- above')
   } else {
     const showBreedHtml = showBreedList({ breed_lists: data.breed_lists })
     $('.list').append(showBreedHtml)

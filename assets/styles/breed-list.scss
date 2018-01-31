@@ -23,14 +23,15 @@
 }
 footer {
   clear: both;
+  align-content: center;
 }
 
 .delete-one-item,
 .show-one-breed,
 .show-full-list {
   float: left;
-  width: 30%;
-  margin-left: 25px;
+  width: 31%;
+  margin-left: 10px;
   background-color: #f2ffcc;
   border-radius: 25%;
 }
@@ -43,6 +44,9 @@ h3 {
   color: #000
 }
 
+h4 {
+  clear: both;
+}
 .hide {
   display: 0;
 }
@@ -55,7 +59,7 @@ legend {
   background-color: #ffbb99;
   border: 1px solid #000;
   display: inline-block;
-  font-size:20px;
+  font-size: 25px;
   float: left;
   height: 300px;
   text-align: center;
@@ -74,4 +78,33 @@ legend {
   font-size: 20px;
   color: #aa80ff;
   // width: 100%;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 25px;
+  }
+  h4 {
+    display: none;
+  }
+  .details {
+    font-size: 20px;
+  }
+  .delete-one-item,
+  .show-one-breed,
+  .show-full-list {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+  .messages {
+    height: 30px;
+    font-size: 15px;
+    color: #aa80ff;
+    // width: 100%;
+  }
+  .list {
+    height: 250px;
+    font-size: 20px;
+  }
 }

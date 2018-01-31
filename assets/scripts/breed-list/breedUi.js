@@ -18,6 +18,7 @@ const createNewListItemSuccess = function (data) {
   $('.list').append(breedHtml)
   $('.messages').text('Success!')
   $('.details').hide()
+  $('#friendModal').modal('hide')
 }
 
 const createNewListItemFailure = function () {
@@ -82,6 +83,7 @@ const updateListItemSuccess = function (data) {
   $('.list').append(breedHtml)
   $('.messages').text('Success updating. See update below')
   $('.details').hide()
+  $('#updateModal').modal('hide')
 }
 
 const updateListItemFailure = function () {

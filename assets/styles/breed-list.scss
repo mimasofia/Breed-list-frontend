@@ -1,0 +1,63 @@
+.all-forms {
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: #993300;
+}
+
+.container-fluid {
+  text-align: center;
+  width: 80%;
+  background-color: #ffddcc;
+}
+
+.delete-input,
+.one-input {
+  width: 30%;
+}
+
+.clearListButton,
+.showListButton {
+  height: 30px;
+}
+footer {
+  clear: both;
+}
+
+.delete-one-item,
+.show-one-breed,
+.show-full-list {
+  float: left;
+  width: 30%;
+  margin-left: 15px;
+}
+
+h3 {
+  color: #000
+}
+
+.hide {
+  display: 0;
+}
+
+legend {
+  border-bottom: 0;
+}
+
+.list {
+  background-color: #ffbb99;
+  border: 1px solid #000;
+  display: inline-block;
+  font-size:20px;
+  float: left;
+  height: 300px;
+  text-align: center;
+  width: 100%;
+}
+
+.messages {
+  height: 40px;
+  font-size: 20px;
+  // width: 100%;
+}

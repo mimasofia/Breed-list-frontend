@@ -2,8 +2,11 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://ga-wdi-boston.herokuapp.com'
+    production: 'https://boiling-garden-37068.herokuapp.com',
+    development: 'http://localhost:4741/'
   }
 }
 
 module.exports = config
+
+// https://ga-wdi-boston.herokuapp.com

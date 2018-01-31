@@ -1,1 +1,3 @@
-This is the first step to the frontend
+One of the challenges I faced in this project was trying to figure out which like to use for development and for production. When I did figure it out the next challenge was getting it to work. I would dry a few times to sign in and sign up and it would not work. After consilting with a collegue we realized that we had to hace our rails server running in order to do any of these 'events'.
+
+Then next challenge I had was trying to make a POST to the database to create a new list item for that user. I wasn't sure what the issue was so i had to go through all the files for that create action. Then I saw that in the iput fields I had breed-list[breed]. I thought thats who it had to be listen but then thought thats not the name of my table. So I tried breed_lists and that didn't work either. Then I tried it without the 's' and it worked. I realized that this is like the JSON response the api is looking for.

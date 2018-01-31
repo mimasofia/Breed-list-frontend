@@ -56,6 +56,14 @@ const onRemoveOneListItem = function (event) {
   $('#delete-one-item').find('input:text, input:password, select, textarea').val('')
 }
 
+// const onRemoveOneDogItem = (event) => {
+//   event.preventDefault()
+//   // ui.removeBook()
+//   // const data = event.target
+//   console.log('clicked made it to onRemoveBook')
+//   // breedUi.removeBook(data)
+// }
+
 const addHandlers = function () {
   $('#create-new-list-item').on('submit', onCreateNewListItem)
   $('#showListButton').on('click', onShowFullList)
@@ -63,6 +71,7 @@ const addHandlers = function () {
   $('#update-list-item').on('submit', onUpdateListItem)
   $('#delete-one-item').on('submit', onRemoveOneListItem)
   $('#clearListButton').on('click', onClearList)
+  // $('.removeDogItem').on('click', onRemoveOneDogItem)
 }
 
 module.exports = {

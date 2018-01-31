@@ -27,6 +27,7 @@ const signInSuccess = function (data) {
   $('#delete-one-item').removeClass('hide')
   $('.list').text('All list related items will appear HERE')
   $('.list').removeClass('hide')
+  $('h4').addClass('hide')
 }
 
 const signInFailure = function () {
@@ -61,6 +62,7 @@ const signOutSuccess = function () {
   $('.details').text('Sign-up or Sign-in to start your very own list!')
   $('#accountModal').modal('hide')
   $('.list').addClass('hide')
+  $('h4').removeClass('hide')
 }
 
 const signOutFailure = function () {

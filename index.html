@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Potential Dogs</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container-fluid">
+      <div class="all-forms">
+    <h1>Welcome! Thinking of getting a dog? Here, you can make a list of potential Dogs!</h1>
+    <h3 class="details">Sign-up or Sign-in to start your very own list!</h3>
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" id="sign-in-up" data-toggle="modal" data-target="#sign-in-modal">
+  Sign-in, Sign-up
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signLabel">Sign-in/ Sign-up</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="sign-messages"></div>
+        <form id="sign-up" class="sign-up sign-hide">
+          <fieldset>
+            <legend>Sign up!</legend>
+            <input type="text" name="credentials[email]" value="" placeholder="Enter Email">
+            <input type="password" name="credentials[password]" value="" placeholder="Enter Password">
+            <input type="password" name="credentials[password_confirmation]" value="" placeholder="Enter Password Again">
+            <input type="submit" name="submit" value="Sign up!">
+          </fieldset>
+        </form>
+        <form id="sign-in" class="sign-in sign-hide">
+          <fieldset>
+            <legend>Sign In</legend>
+            <input type="text" name="credentials[email]" placeholder="Enter Email Here">
+            <input type="password" name="credentials[password]" placeholder="Enter Password Here">
+            <input type="submit" id="submit" name="submit" value="Sign In">
+          </fieldset>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button"  class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary hide" id="account-pass-out" data-toggle="modal" data-target="#accountModal">
+  Account
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="accountLabel">Account</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="change-out-messages"></div>
+        <form id="password-change" class="password-change">
+          <fieldset>
+            <legend>Change Password</legend>
+            <input type="password" name="passwords[old]" placeholder="Old password here">
+            <input type="password" name="passwords[new]" placeholder="New password here">
+            <input type="submit" name="submit" value="Change Password">
+          </fieldset>
+        </form>
+        <form id="sign-out" class="sign-out">
+          <fieldset>
+            <legend>Sign Out</legend>
+            <input type="submit" name="submit" value="Sign out">
+          </fieldset>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary hide" id="add-friend-here" data-toggle="modal" data-target="#friendModal">
+  Add Potential Dog-friend to List
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="friendModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="friendLabel">Add Friend Here</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="add-dog-messages"></div>
+        <form id='create-new-list-item' class="create-new-list-item">
+          <fieldset>
+            <legend>Add dog breed to list</legend>
+            <input type="text" name="breed_list[breed]" placeholder="Breed">
+            <input type="text" name="breed_list[gender]" placeholder="Gender">
+            <input type="number" name="breed_list[weight]" placeholder="Weight in Lbs">
+            <input type="number" name="breed_list[height]" placeholder="Height in cm">
+            <input type="submit" name="submit" value="Click to add to List">
+          </fieldset>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary hide" id="update-friend-here" data-toggle="modal" data-target="#updateModal">
+  Update an Existing Breed
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update All Fields</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-messages"></div>
+        <form id="update-list-item">
+            <fieldset>
+              <legend>Update List Item</legend>
+              <input name="breed_list[id]" type="text" placeholder="Breed ID">
+              <input name="breed_list[breed]" type="text" placeholder="New Breed">
+              <input name="breed_list[gender]" type="text" placeholder="New Gender">
+              <input name="breed_list[weight]" type="number" placeholder="New Weight in Lbs">
+              <input name="breed_list[height]" type="number" placeholder="New Height in cm">
+              <input type="submit" name="submit" value="Update List Item">
+            </fieldset>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="messages"></div>
+      <div class="list hide" style="overflow-y: scroll"></div>
+
+    <footer>
+      <form id='show-full-list' class="show-full-list hide">
+        <fieldset>
+          <legend>Full list</legend>
+          <button id="showListButton" class="btn btn-default showListButton">Show Full List!</button>
+          <!-- <input class="show-full-list-submit" type="submit" name="submit" value="Click For Full List"> -->
+          <button id="clearListButton" class="btn btn-default clearListButton">Clear List!</button>
+        </fieldset>
+      </form>
+
+      <form id='show-one-breed' class="show-one-breed hide">
+      <fieldset>
+        <legend>Show One Breed</legend>
+        <!-- <div class="one-breed" style="overflow-y: scroll"></div> -->
+        <!-- <div id="one-breed"></div> -->
+        <input type="text" class="one-input"name='breed_list[id]'  placeholder="Breed id here">
+        <input type="submit" name="submit" value="One breed">
+      </fieldset>
+    </form>
+
+      <form id='delete-one-item' class="delete-one-item hide">
+      <fieldset>
+        <legend>Remove ONE list item</legend>
+        <input class="delete-input"type="text" name='breed_list[id]'  placeholder="Breed id here">
+        <input type="submit" name="submit" value="Delete one item">
+        <!-- <button type="submit" name="submit" value="Delete one list item"> -->
+      </fieldset>
+    </form>
+  </div>
+</footer>
+<h4>Made by Virginia Donaire</h4>
+    </body>
+</html>

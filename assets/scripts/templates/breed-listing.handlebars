@@ -2,7 +2,7 @@
 <!-- each is an interation method for handelbars-->
 
  <!-- Developers, why are we using data-id and not just id? -->
- <div>
+ <p>
   <p><h1 data-id="{{breed_list.id}}"> <small>Breed: {{breed_list.breed}}</small></h1></p>
   <p>Id: {{breed_list.id}}</p>
   <p>Gender: {{breed_list.gender}}</p>
@@ -10,17 +10,8 @@
   <p>Height: {{breed_list.height}}</p>
   <!-- data attribute in hrml we dont use id  there becuase you dont want to assume you wont get
 duplicates not a big deal if teo things have the same data-id -->
-  <!-- <li>
-    <div>
-    {{#if book.author}}
-      {{book.author}}
-    {{else}}
-      No author provided.
-    {{/if}}
-  </div>
-  </li> -->
-  <!-- <li><button class="removeBookButton" class="btn btn-default">Remove Book</button></li> -->
-</div>
+<!-- <small><li><button class="removeDogItem" class="btn btn-default">Remove item from list</button></li></small> -->
+</p>
   <!-- if the book has an author it will show that and if it doesn;t it will
 say whats in the else, truthy things -->
 

@@ -20,13 +20,13 @@ const signInSuccess = function (data) {
   // store now has the user stuff after it runs even if the file is emptty
   store.user = data.user
   $('.details').text('Enjoy making a list of your potential dog-friends!')
-  $('#sign-in-up').addClass('hide')
-  $('#account-pass-out').removeClass('hide')
-  $('#add-friend-here').removeClass('hide')
-  $('#update-friend-here').removeClass('hide')
-  $('#show-full-list').removeClass('hide')
-  $('#show-one-breed').removeClass('hide')
-  $('#delete-one-item').removeClass('hide')
+  $('#sign-in-up').addClass('hidden')
+  $('#account-pass-out').removeClass('hidden')
+  $('#add-friend-here').removeClass('hidden')
+  $('#update-friend-here').removeClass('hidden')
+  $('#show-full-list').removeClass('hidden')
+  $('#show-one-breed').removeClass('hidden')
+  $('#delete-one-item').removeClass('hidden')
   $('.list').text('All list related items will appear HERE')
 }
 
@@ -48,16 +48,16 @@ const changePasswordFailure = function () {
 const signOutSuccess = function () {
   $('.list').empty()
   // console.log('Successfully signed out')
-  // $('words-hide').addClass('hide')
+  // $('words-hide').addClass('hidden')
   store.user = null
   $('.messages').text('Successfully signed out!')
-  $('#sign-in-up').removeClass('hide')
-  $('#account-pass-out').addClass('hide')
-  $('#add-friend-here').addClass('hide')
-  $('#update-friend-here').addClass('hide')
-  $('#show-full-list').addClass('hide')
-  $('#show-one-breed').addClass('hide')
-  $('#delete-one-item').addClass('hide')
+  $('#sign-in-up').removeClass('hidden')
+  $('#account-pass-out').addClass('hidden')
+  $('#add-friend-here').addClass('hidden')
+  $('#update-friend-here').addClass('hidden')
+  $('#show-full-list').addClass('hidden')
+  $('#show-one-breed').addClass('hidden')
+  $('#delete-one-item').addClass('hidden')
   $('.details').text('Sign-up or Sign-in to start your very own list!')
 }
 

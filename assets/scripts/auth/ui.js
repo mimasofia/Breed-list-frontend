@@ -16,7 +16,7 @@ const signUpFailure = function () {
 const signInSuccess = function (data) {
   $('.messages').text('Successfully signed in!')
   store.user = data.user
-  $('.details').text('If this is your first time start by adding a Dog to the list with -Add Potential Dog-friend to List button- above')
+  $('.details').text('If this is your first time start by adding a Dog to the list with -Add Potential Dog-friend to List- button')
   $('#sign-in-modal').modal('hide')
   $('#sign-in-up').addClass('hide')
   $('#account-pass-out').removeClass('hide')

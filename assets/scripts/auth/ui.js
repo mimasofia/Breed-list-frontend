@@ -4,13 +4,13 @@ const store = require('../store')
 const signUpSuccess = function (data) {
   // console.log(data)
   $('.messages').text('Successfully signed up!')
-  console.log('succes')
+  // console.log('succes')
 }
 
 const signUpFailure = function () {
   // console.error(error)
   $('.messages').text('Error when signing up. Please try again')
-  console.log('faliure')
+  // console.log('faliure')
 }
 
 const signInSuccess = function (data) {

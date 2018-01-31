@@ -2,8 +2,8 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://boiling-garden-37068.herokuapp.com'
-    // development: 'http://localhost:4741/'
+    production: 'https://boiling-garden-37068.herokuapp.com',
+    development: 'http://localhost:4741/'
   }
 }
 
